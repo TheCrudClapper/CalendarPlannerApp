@@ -1,0 +1,6 @@
+wmucha,wmucha,wmucha
+test1,test1,test1
+test,test,test
+test,klasdf;olf,asdsdas,2024-06-09,12:13,true,PERSONAL
+test,Tets,Tets,2024-06-09,12:12,true,STUDY
+jan,chuj,nowakl@lubiewdupe16

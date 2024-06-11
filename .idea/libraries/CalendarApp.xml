@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CalendarApp">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/CalendarApp.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

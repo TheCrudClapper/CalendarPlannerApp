@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<!-- By default, only the Clean and Build commands use this build script. -->
+<!-- Commands such as Run, Debug, and Test only use this build script if -->
+<!-- the Compile on Save feature is turned off for the project. -->
+<!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
+<!-- in the project's Project Properties dialog box.-->
+<project name="CalendarApp" default="client-jar" basedir=".">
+    <!-- Define properties -->
+    <property name="build.dir" value="build"/>
+    <property name="dist.dir" value="dist"/>
+    <property name="client.build.dir" value="${build.dir}/client"/>
+    <property name="server.build.dir" value="${build.dir}/server"/>
+
+    <!-- Init targets -->
+    <target name="init">
+        <mkdir dir="${client.build.dir}"/>
+        <mkdir dir="${server.build.dir}"/>
+    </target>
+
+    <!-- Compile targets -->
+    <target name="compile-client" depends="init">
+        <javac srcdir="src" destdir="${client.build.dir}" includes="Client/**"/>
+    </target>
+
+    <target name="compile-server" depends="init">
+        <javac srcdir="src" destdir="${server.build.dir}" includes="Server/**"/>
+    </target>
+
+    <!-- Jar targets -->
+    <target name="client-jar" depends="compile-client">
+        <jar destfile="${dist.dir}/ClientApp.jar" basedir="${client.build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="Client.ClientMain"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="server-jar" depends="compile-server">
+        <jar destfile="${dist.dir}/ServerApp.jar" basedir="${server.build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="Server.ServerMain"/>
+            </manifest>
+        </jar>
+    </target>
+</project>
+
+

@@ -171,9 +171,15 @@ class ClientReadThread extends Thread {
             Task task;
             ArrayList<Task> tasks = new ArrayList<>();
             //when we recieve null it means that sending tasks is done
+<<<<<<< HEAD
             while ((task = (Task) inObj.readObject()) != null) {
                 tasks.add(task);
             }
+=======
+           while ((task = (Task) inObj.readObject()) != null) {
+               tasks.add(task);
+           }
+>>>>>>> eb52dd96bbfa019c155ca43ee1b79f58a97fcae4
             client.setLocalTaskList(tasks);
         } catch (IOException ex) {
             System.out.println("An error occurred while reading tasks from the server.");

@@ -177,7 +177,7 @@ public class CalendarMainWindow extends JFrame implements ActionListener {
             manageTasks.setEnabled(false);
         }
         if (source == author) {
-            JOptionPane.showMessageDialog(null, "Wojciech Mucha StudentID: 28702");
+            JOptionPane.showMessageDialog(null, "Wojciech Mucha");
         }
     }
 
